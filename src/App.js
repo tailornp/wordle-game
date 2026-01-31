@@ -3,6 +3,7 @@ import Button from "./components/Button/Buttons";
 import { useEffect, useRef, useState } from "react";
 import { getWord } from "./utils";
 import ResultModal from "./components/ResultModal/ResultModal";
+import PlayModal from "./components/PlayModal/PlayModal";
 
 function App() {
   const [guessCount, setGuessCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
   const inputRef = useRef(null);
   const [disabled, setDisabled] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [howToPlayModal, setHowToPlayModal] = useState(false);
   const [validationError, setValidationError] = useState("");
 
   useEffect(() => {
@@ -71,7 +73,7 @@ function App() {
     } else if (word.includes(letter)) {
       return "Yellow";
     } else {
-      return "Red";
+      return "Gray";
     }
   };
 
@@ -90,11 +92,11 @@ function App() {
         placeholder="Enter the guess word"
         className="Word-Input"
       ></input>
-      {validationError && (
-        <p style={{ color: "red", margin: "5px 0", fontSize: "14px" }}>
-          {validationError}
-        </p>
-      )}
+      <span
+        className={`Error-Message ${validationError !== "" ? "Visible" : ""}`}
+      >
+        {validationError}
+      </span>
       <div>
         <Button text="Guess" onClick={handleGuess} disabled={disabled} />
         <Button text="Reset" onClick={handleReset} />
@@ -125,6 +127,8 @@ function App() {
         ) : (
           <></>
         )}
+        <Button text="How to Play" onClick={() => setHowToPlayModal(true)} />
+        {howToPlayModal && <PlayModal close={() => setHowToPlayModal(false)} />}
       </div>
     </div>
   );

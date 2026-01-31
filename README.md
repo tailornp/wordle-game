@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Wordle Game
+
+A fun Wordle game created with React. Guess the word in 5 tries and enjoy the classic word-guessing experience!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

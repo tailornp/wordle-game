@@ -22,10 +22,39 @@
 .Modal-Content {
   display: flex;
   flex-grow: 1;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: x-large;
 }
+
+@media screen and (max-width: 756px) {
+  .Modal-Content {
+    font-size: large;
+  }
+}
 .Word-Highlight {
   color: yellow;
+}
+
+.Rules ul {
+  list-style-type: none;
+}
+
+.Rules li {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.Gray-Bullet {
+  border: 15px solid gray;
+}
+
+.Yellow-Bullet {
+  border: 15px solid yellow;
+}
+
+.Green-Bullet {
+  border: 15px solid greenyellow;
 }

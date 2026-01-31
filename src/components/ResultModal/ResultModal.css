@@ -1,0 +1,31 @@
+/* Styles for Modal */
+.Modal-Overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.Modal-Header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Modal-Content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+.Word-Highlight {
+  color: yellow;
+}

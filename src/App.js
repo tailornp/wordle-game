@@ -122,12 +122,12 @@ function App() {
             </div>
           );
         })}
+        <Button text="How to Play" onClick={() => setHowToPlayModal(true)} />
         {showModal ? (
           <ResultModal result={result} word={word} close={closeModal} />
         ) : (
           <></>
         )}
-        <Button text="How to Play" onClick={() => setHowToPlayModal(true)} />
         {howToPlayModal && <PlayModal close={() => setHowToPlayModal(false)} />}
       </div>
     </div>

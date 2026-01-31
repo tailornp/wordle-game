@@ -9,7 +9,10 @@ const ResultModal = ({ result, word, close }) => {
 
       <div className="Modal-Content">
         {result ? (
-          <p>{`Congratulations! You guessed the word - ${word}! 🎉`}</p>
+          <p>
+            Congratulations! You guessed the word -{" "}
+            <b className="Word-Highlight">{`${word}`}</b>! 🎉
+          </p>
         ) : (
           <p>
             Game Over! The correct word was{" "}

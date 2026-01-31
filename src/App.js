@@ -78,6 +78,7 @@ function App() {
   };
 
   const closeModal = () => {
+    setDisabled(true);
     setShowModal(false);
   };
   return (
@@ -122,13 +123,19 @@ function App() {
             </div>
           );
         })}
-        <Button text="How to Play" onClick={() => setHowToPlayModal(true)} />
-        {showModal ? (
-          <ResultModal result={result} word={word} close={closeModal} />
-        ) : (
-          <></>
-        )}
-        {howToPlayModal && <PlayModal close={() => setHowToPlayModal(false)} />}
+      </div>
+      <Button text="How to Play" onClick={() => setHowToPlayModal(true)} />
+      {showModal ? (
+        <ResultModal result={result} word={word} close={closeModal} />
+      ) : (
+        <></>
+      )}
+      {howToPlayModal && <PlayModal close={() => setHowToPlayModal(false)} />}
+      <div className="Credit">
+        A fun side project by -{" "}
+        <b>
+          <i>Nidhi</i>
+        </b>
       </div>
     </div>
   );

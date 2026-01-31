@@ -81,13 +81,19 @@
   visibility: hidden;
   opacity: 0;
   transition:
-    opacity 0.3s,
-    visibility 0.3s;
+    opacity 0.2s,
+    visibility 0.2s;
+  color: crimson;
 }
 
 .Error-Message.Visible {
   visibility: visible;
   opacity: 1;
+}
+
+.Credit {
+  margin-top: 50px;
+  font-size: small;
 }
 /*Input Field Styles*/
 .Word-Input {
